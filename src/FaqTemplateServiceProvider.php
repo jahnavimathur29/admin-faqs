@@ -13,6 +13,7 @@ class FaqTemplateServiceProvider extends ServiceProvider
     {
         // Load routes, views, migrations from the package
         // $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+         $this->registerAdminRoutes();
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'faq');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->mergeConfigFrom(__DIR__.'/../config/faq.php', 'faq.constants');
@@ -24,7 +25,6 @@ class FaqTemplateServiceProvider extends ServiceProvider
             __DIR__ . '/../config/faq.php' => config_path('constants/faq.php'),
         ], 'faq');
 
-        $this->registerAdminRoutes();
 
     }
 
