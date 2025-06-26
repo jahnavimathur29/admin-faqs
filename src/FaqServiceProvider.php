@@ -19,9 +19,11 @@ class FaqServiceProvider extends ServiceProvider
         
 
         $this->publishes([  
-            __DIR__.'/../resources/views' => resource_path('views/vendor/faq'),
-            __DIR__ . '/../resources/css/backend' => public_path('backend'),
             __DIR__ . '/../config/faq.php' => config_path('constants/faq.php'),
+            __DIR__.'/../resources/views' => resource_path('views/admin/faq'),
+            __DIR__ . '/../src/Controllers' => app_path('Http/Controllers/Admin/FaqManager'),
+            __DIR__ . '/../src/Models' => app_path('Models/Admin/Faq'),
+            __DIR__ . '/routes/web.php' => base_path('routes/admin/admin_faq.php'),
         ], 'faq');
 
         $this->registerAdminRoutes();
