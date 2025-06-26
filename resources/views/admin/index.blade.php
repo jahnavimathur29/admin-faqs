@@ -122,7 +122,7 @@ Manage FAQs in the admin panel. Create, edit, or update FAQ questions, answers, 
                                         @endforeach
                                     @else
                                         <tr>
-                                            <td colspan="4" class="text-center">No faqs found.</td>
+                                            <td colspan="5" class="text-center">No faqs found.</td>
                                         </tr>
                                     @endif
                                 </tbody>
